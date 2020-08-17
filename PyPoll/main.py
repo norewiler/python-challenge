@@ -31,3 +31,21 @@ for cand, votes in results.items():
 print("-------------------------")
 print(f"Winner: {winner}")
 print("-------------------------")
+
+
+export_file_path = os.path.join("Analysis", "pollAnalysis.txt")
+with open(export_file_path, "w") as analysis:
+    analysis.write("Election Results\n")
+    analysis.write("-------------------------\n")
+    analysis.write(f"Total Votes: {tot_votes}\n")
+    analysis.write("-------------------------\n")
+    maxPct = 0
+    for cand, votes in results.items():
+        pct = round(((votes/tot_votes)*100),3)
+        if pct > maxPct:
+            maxPct = pct
+            winner = cand
+        analysis.write(f"{cand}: {pct}% ({votes})\n")
+    analysis.write("-------------------------\n")
+    analysis.write(f"Winner: {winner}\n")
+    analysis.write("-------------------------\n")
