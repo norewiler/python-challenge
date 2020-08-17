@@ -21,6 +21,13 @@ print("Election Results")
 print("-------------------------")
 print(f"Total Votes: {tot_votes}")
 print("-------------------------")
+maxPct = 0
 for cand, votes in results.items():
-    print(f"{cand}: {round(((votes/tot_votes)*100),3)}% ({votes})")
+    pct = round(((votes/tot_votes)*100),3)
+    if pct > maxPct:
+        maxPct = pct
+        winner = cand
+    print(f"{cand}: {pct}% ({votes})")
+print("-------------------------")
+print(f"Winner: {winner}")
 print("-------------------------")
