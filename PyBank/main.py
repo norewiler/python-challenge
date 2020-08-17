@@ -35,8 +35,8 @@ print("----------------------------")
 print(f"Total Months: {num_months}")
 print(f"Total: ${totalPNL}")
 print(f"Average Change: ${round(avgChange, 2)}")
-print(f"Greates Increase in Profits: {greatIncMonth} (${greatInc})")
-print(f"Greates Decrease in Profits: {greatDecMonth} (${greatDec})")
+print(f"Greatest Increase in Profits: {greatIncMonth} (${greatInc})")
+print(f"Greatest Decrease in Profits: {greatDecMonth} (${greatDec})")
 
 export_file_path = os.path.join("Analysis", "finAnalysis.txt")
 with open(export_file_path, "w") as analysis:
@@ -45,5 +45,5 @@ with open(export_file_path, "w") as analysis:
     analysis.write(f"Total Months: {num_months}\n")
     analysis.write(f"Total: ${totalPNL}\n")
     analysis.write(f"Average Change: ${round(avgChange, 2)}\n")
-    analysis.write(f"Greates Increase in Profits: {greatIncMonth} (${greatInc})\n")
-    analysis.write(f"Greates Decrease in Profits: {greatDecMonth} (${greatDec})\n")
+    analysis.write(f"Greatest Increase in Profits: {greatIncMonth} (${greatInc})\n")
+    analysis.write(f"Greatest Decrease in Profits: {greatDecMonth} (${greatDec})\n")
