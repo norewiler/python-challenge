@@ -30,9 +30,11 @@ with open(file_path, "r") as data:
         totalPNL += int(row[1])
 avgChange = totalChanges / (num_months - 1)
 
+print("Financial Analysis")
+print("----------------------------")
 print(f"Total Months: {num_months}")
 print(f"Total: ${pnl}")
-print(f"Average Change: $ {avgChange}")
+print(f"Average Change: ${round(avgChange, 2)}")
 print(f"Greates Increase in Profits: {greatIncMonth} (${greatInc})")
 print(f"Greates Decrease in Profits: {greatDecMonth} (${greatDec})")
 
